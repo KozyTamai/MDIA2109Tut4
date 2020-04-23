@@ -1,0 +1,12 @@
+#mainapp {
+    position: relative;
+    right:0;
+    opacity: 1;
+    transition: right 1s;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+

@@ -1,0 +1,15 @@
+#chatpage {
+    position: relative;
+    left: -100%;
+    transition: left 1s;
+}
+
+#welcome {
+    display: flex;
+    align-items: center;
+}
+
+#custom_button {
+    display: flex;
+    align-items: center;
+}

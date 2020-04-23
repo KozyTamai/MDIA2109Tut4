@@ -1,9 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './chatpage.css';
 import Chat from '../../comps/Chat';
 import CustomButton from '../../comps/CustomButton';
 import Header from '../../comps/Header';
 import Input from '../../comps/Input';
+import Link from 'next/link';
+import {FiSmile} from 'react-icons/fi';
+import {FaRegHandPointLeft} from 'react-icons/fa';
+
 
 /*
 var welcome_state = "Welcome to my App!"
@@ -24,9 +28,16 @@ const ChatPage =({}) => {
     const[color, setColor] = useState("#33cc33");
     const[text, setText] = useState("Click Here");
 
-    return <div>
+    useEffect (()=>{
+        setTimeout(()=>{
+            document.querySelector("#chatpage").style.left = 0;
+        }, 50)
+    },[]);
+
+    return <div id="chatpage">
         <div id="welcome">
             <Header fontSize={32} text={welcome} />
+            <FiSmile color="#f5e256" size="2em"/>
         </div>
 
         <div id="chats" onClick={()=>{
@@ -57,8 +68,10 @@ const ChatPage =({}) => {
             <CustomButton text={text} color={color} onClick={()=>{
             setColor("#cc99ff");
             setText("Yey!");
-        }}/>
+        }}/><FaRegHandPointLeft size="2em" color="#ff8f4a"/>
+        
         </div>
+        <Link href="/"><CustomButton text="Back Home" color="#3281a8"></CustomButton></Link>
     </div>
 }
 

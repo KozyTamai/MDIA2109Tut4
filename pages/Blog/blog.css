@@ -1,0 +1,29 @@
+.blog_image {
+    width:200px;
+    height:150px;
+}
+
+#blog_articles {
+    display: flex;
+}
+
+.blog_cont {
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+#blog{
+    position: relative;
+    opacity:0;
+    transition: all 1s;
+}
+
+.blog_header {
+    display: flex;
+    align-items: center;
+}
